@@ -458,3 +458,6 @@ HandshakeMessages[HandshakeType.server_hello] = ServerHello;
 HandshakeMessages[HandshakeType.hello_verify_request] = HelloVerifyRequest;
 HandshakeMessages[HandshakeType.server_hello_done] = ServerHelloDone;
 HandshakeMessages[HandshakeType.finished] = Finished;
+
+HandshakeMessages[HandshakeType.server_key_exchange] = ServerKeyExchange;
+
