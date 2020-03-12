@@ -165,7 +165,14 @@ var dtls;
                             // terminate the connection when receiving a fatal alert
                             const errorMessage = `received fatal alert: ${Alert_1.AlertDescription[alert.description]}`;
                             debug(errorMessage);
-                            this.killConnection(new Error(errorMessage));
+                            //_my							this.killConnection(new Error(errorMessage));
+                            if (alert.description !== Alert_1.AlertDescription.close_notify)
+                                this.killConnection(new Error(errorMessage));
+                            else {
+                                this.close();
+                                //throw new Error("_my received fatal alert:  close_notify");
+                                //this.emit("error", "_my received fatal alert:  close_notify");
+                            }
                         }
                         else if (alert.level === Alert_1.AlertLevel.warning) {
                             // not sure what to do with most warning alerts

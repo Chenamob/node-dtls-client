@@ -192,7 +192,7 @@ export namespace dtls {
 							const errorMessage = `received fatal alert: ${AlertDescription[alert.description]}`;
 							debug(errorMessage);
 //_my							this.killConnection(new Error(errorMessage));
-if(alert.description !== Alert_1.AlertDescription.close_notify)
+if(alert.description !== AlertDescription.close_notify)
 	this.killConnection(new Error(errorMessage));
 else {
 	this.close();

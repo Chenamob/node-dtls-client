@@ -368,3 +368,4 @@ exports.HandshakeMessages[HandshakeType.server_hello] = ServerHello;
 exports.HandshakeMessages[HandshakeType.hello_verify_request] = HelloVerifyRequest;
 exports.HandshakeMessages[HandshakeType.server_hello_done] = ServerHelloDone;
 exports.HandshakeMessages[HandshakeType.finished] = Finished;
+exports.HandshakeMessages[HandshakeType.server_key_exchange] = ServerKeyExchange;
