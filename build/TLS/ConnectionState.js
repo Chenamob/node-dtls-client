@@ -27,7 +27,8 @@ class ConnectionState {
         // }
         this.entity = "client";
         this.cipherSuite = CipherSuites_1.CipherSuites.TLS_NULL_WITH_NULL_NULL;
-        this.protocolVersion = new ProtocolVersion_1.ProtocolVersion(~1, ~0); // default to DTLSv1.0 during handshakes
+        //	public protocolVersion: ProtocolVersion = new ProtocolVersion(~1, ~0); // default to DTLSv1.0 during handshakes
+        this.protocolVersion = new ProtocolVersion_1.ProtocolVersion(~1, ~2); // default to DTLSv1.2 during handshakes because Contiki-NG use ONLY DTLSv1.2
         this.compression_algorithm = CompressionMethod.null;
     }
     get Cipher() {

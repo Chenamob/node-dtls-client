@@ -45,7 +45,8 @@ export class ConnectionState {
 
 	public entity: ConnectionEnd = "client";
 	public cipherSuite: CipherSuite = CipherSuites.TLS_NULL_WITH_NULL_NULL;
-	public protocolVersion: ProtocolVersion = new ProtocolVersion(~1, ~0); // default to DTLSv1.0 during handshakes
+//	public protocolVersion: ProtocolVersion = new ProtocolVersion(~1, ~0); // default to DTLSv1.0 during handshakes
+	public protocolVersion: ProtocolVersion = new ProtocolVersion(~1, ~2); // default to DTLSv1.2 during handshakes because Contiki-NG use ONLY DTLSv1.2
 	public compression_algorithm: CompressionMethod = CompressionMethod.null;
 	public master_secret: Buffer /*48*/;
 	public client_random: Buffer /*32*/;
